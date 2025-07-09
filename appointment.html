@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book An Appointment - Professional Dental Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+
+
+
+
+
+.contact-support-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: var(--custom-light-bg);
+}
+
+.contact-support-section .contact-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 30px; /* Adjust padding for visual balance */
+}
+
+.contact-support-section .contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.contact-support-section .contact-card i {
+    font-size: 3.5rem; /* Larger icons */
+    margin-bottom: 15px;
+}
+
+.contact-support-section .contact-card h4 {
+    font-size: 1.8rem;
+    color: var(--text-color-dark);
+}
+
+.contact-support-section .contact-card p {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.contact-support-section .contact-card p a {
+    font-size: 1.1rem; /* Slightly larger for links */
+}
+
+.contact-support-section .decorative-dots-pattern {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    bottom: 5%;
+    right: 0%;
+    background-image: radial-gradient(var(--decorative-blue-light) 15%, transparent 16%);
+    background-size: 20px 20px;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+
+.additional-resources-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #fff;
+}
+
+.additional-resources-section .resource-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 30px;
+    text-align: center;
+}
+
+.additional-resources-section .resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.additional-resources-section .resource-card i {
+    font-size: 3rem; /* Icons for resources */
+    margin-bottom: 15px;
+}
+
+.additional-resources-section .resource-card h4 {
+    font-size: 1.7rem;
+    color: var(--text-color-dark);
+}
+
+.additional-resources-section .resource-card p {
+    font-size: 0.95rem;
+    color: var(--custom-grey);
+    margin-bottom: 25px; /* Space before button */
+}
+
+/* Appointment Page Specific Styles */
+.appointment-hero-section .decorative-blob-green {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-color: var(--decorative-green-light);
+    border-radius: 40% 60% 70% 30% / 60% 30% 70% 40%;
+    top: 50%;
+    left: -100px;
+    transform: translateY(-50%) rotate(10deg);
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.appointment-hero-section .decorative-star-pink {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: var(--decorative-pink-light);
+    top: 15%;
+    right: 15%;
+    transform: rotate(45deg);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 220, 229, 0.6);
+    z-index: 0;
+}
+
+.appointment-form-section {
+    background-color: #fff;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.appointment-form-card {
+    border: 1px solid #eee;
+}
+
+.appointment-form-section .form-control,
+.appointment-form-section .form-select {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.appointment-form-section .form-control:focus,
+.appointment-form-section .form-select:focus {
+    border-color: var(--custom-blue);
+    box-shadow: 0 0 0 0.25rem rgba(10, 83, 248, 0.25);
+}
+
+.clinic-info-section {
+    background-color: var(--custom-light-bg);
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.clinic-info-section .map-placeholder {
+    width: 100%;
+    height: 450px; /* Fixed height for the map */
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 1.2rem;
+    overflow: hidden; /* Ensure iframe is contained */
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-fade-in-left {
+    opacity: 0;
+    animation: fadeInLeft 0.6s ease-out forwards;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-fade-in-right {
+    opacity: 0;
+    animation: fadeInRight 0.6s ease-out forwards;
+}
+
+/* Animation delays */
+.animate-delay-1 { animation-delay: 0.1s; }
+.animate-delay-2 { animation-delay: 0.2s; }
+.animate-delay-3 { animation-delay: 0.3s; }
+.animate-delay-4 { animation-delay: 0.4s; }
+.animate-delay-5 { animation-delay: 0.5s; }
+.animate-delay-6 { animation-delay: 0.6s; }
+.animate-delay-7 { animation-delay: 0.7s; }
+.animate-delay-8 { animation-delay: 0.8s; }
+
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .custom-navbar .nav-link {
+        margin-right: 0;
+        text-align: left;
+    }
+    .custom-navbar .nav-link::after {
+        display: none; /* Hide underline on mobile */
+    }
+
+    .custom-offcanvas .offcanvas-body .navbar-nav {
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        margin-bottom: 20px;
+    }
+
+    .hero-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .decorative-star {
+        font-size: 3rem;
+        top: -15px;
+        left: -10px;
+    }
+
+    .hero-image-composite {
+        height: auto; /* Auto height for stacked images */
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Spacing between stacked images */
+        align-items: center; /* Center images */
+    }
+
+    .image-wrapper {
+        position: static; /* Remove absolute positioning on mobile */
+        width: 80% !important; /* Make images take up more width */
+        height: 250px !important; /* Consistent height for mobile images */
+        margin: 0 auto; /* Center individual images */
+    }
+
+    .image-wrapper img {
+        border-radius: 10px; /* Slightly less rounded on mobile */
+    }
+
+    /* Hide decorative shapes on mobile for simplicity */
+    .shape-blob-blue,
+    .shape-blob-yellow,
+    .shape-star-green,
+    .services-hero-section .decorative-blob-yellow-right,
+    .services-hero-section .decorative-dots-blue-left,
+    .about-hero-section .decorative-blob-pink,
+    .about-hero-section .decorative-square-green,
+    .help-hero-section .decorative-square-blue,
+    .help-hero-section .decorative-circle-yellow,
+    .faq-section .decorative-line-pattern,
+    .contact-support-section .decorative-dots-pattern,
+    .appointment-hero-section .decorative-blob-green,
+    .appointment-hero-section .decorative-star-pink {
+        display: none;
+    }
+
+    .d-none.d-lg-block {
+        display: none !important; /* Ensure icons are hidden on smaller screens */
+    }
+
+    .d-flex.flex-column.flex-sm-row {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        align-items: flex-start;
+    }
+
+    .hero-section .btn-lg {
+        width: 100%; /* Full width buttons on mobile */
+    }
+
+    .hero-content {
+        padding-right: 0;
+    }
+
+    /* Services section adjustments */
+    .services-section h2, .page-hero-section h1 { /* Apply to both services section headings */
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    .services-section p, .page-hero-section p { /* Apply to both services section paragraphs */
+        text-align: center;
+        padding-right: 0 !important;
+    }
+    .service-card {
+        min-height: auto; /* Adjust height for mobile */
+        text-align: center; /* Center content on mobile */
+    }
+    .service-card .icon-wrapper {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Choose Us section adjustments */
+    .choose-us-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .choose-us-content {
+        padding-left: 0 !important; /* Remove left padding on small screens */
+        text-align: center;
+        margin-top: 30px; /* Add some space between image and text on mobile */
+    }
+    .choose-us-content h2 {
+        font-size: 2.2rem;
+        max-width: 100%; /* Allow full width */
+    }
+    .choose-us-content p {
+        max-width: 100%; /* Allow full width */
+    }
+
+    /* Our Services section adjustments */
+    .our-services-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .our-services-content {
+        text-align: center;
+        padding-right: 0 !important;
+        margin-bottom: 30px; /* Space between text and cards */
+    }
+    .our-services-content h2 {
+        font-size: 2.2rem;
+    }
+    .custom-checklist {
+        padding-left: 0; /* Ensure no padding issue on mobile */
+        text-align: left; /* Keep list items left-aligned */
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 300px; /* Optional: Limit width of checklist on small screens */
+    }
+    .custom-checklist li {
+        justify-content: flex-start; /* Ensure checkmark and text align left */
+    }
+
+    /* Team Section adjustments */
+    .team-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .team-section .mb-5 {
+        margin-bottom: 30px !important; /* Adjust heading/description spacing */
+    }
+    .team-section h2 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    .team-section p {
+        text-align: center;
+        padding-left: 0 !important;
+        margin-top: 15px; /* Space between heading and paragraph on mobile */
+    }
+    .team-card {
+        margin-bottom: 20px; /* Spacing between cards when stacked */
+    }
+    .carousel-nav-arrows {
+        display: none !important; /* Hide arrows on small screens, as a true carousel would need JS */
+    }
+
+    /* Footer Section adjustments */
+    .footer-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .footer-section .col-md-3,
+    .footer-section .col-md-2 {
+        margin-bottom: 30px; /* Add spacing between columns on mobile */
+    }
+    .footer-section .footer-brand,
+    .footer-section h5 {
+        text-align: center; /* Center headings on mobile */
+    }
+    .social-icons {
+        text-align: center; /* Center social icons on mobile */
+    }
+    .footer-links {
+        text-align: center; /* Center links on mobile */
+    }
+
+    /* About Us Page Specific Adjustments */
+    .mission-vision-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .mission-vision-section .col-lg-6 {
+        text-align: center;
+    }
+    .mission-vision-section .value-card {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .cta-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .cta-section h2 {
+        font-size: 2.2rem;
+    }
+    .cta-section p {
+        font-size: 1rem;
+    }
+
+    /* Help Page Specific Adjustments */
+    .faq-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .contact-support-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .contact-support-section .contact-card {
+        margin-bottom: 20px; /* Spacing between contact cards */
+    }
+    .contact-support-section .contact-card i {
+        font-size: 3rem; /* Slightly smaller icons on mobile */
+    }
+    .contact-support-section .contact-card h4 {
+        font-size: 1.6rem;
+    }
+    .additional-resources-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .additional-resources-section .resource-card {
+        margin-bottom: 20px; /* Spacing between resource cards */
+    }
+    .additional-resources-section .resource-card i {
+        font-size: 2.5rem; /* Slightly smaller icons on mobile */
+    }
+    .additional-resources-section .resource-card h4 {
+        font-size: 1.5rem;
+    }
+
+    /* Appointment Page Specific Adjustments */
+    .appointment-form-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .appointment-form-card {
+        padding: 30px !important; /* Adjust padding on smaller screens */
+    }
+    .clinic-info-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .clinic-info-section .map-placeholder {
+        height: 300px; /* Smaller map on mobile */
+    }
+}
+
+@media (max-width: 767.98px) { /* Small devices (portrait tablets, large phones) */
+    .choose-us-image-wrapper img {
+        width: 90%; /* Smaller image on very small screens */
+        margin: 0 auto;
+        display: block;
+    }
+    .our-services-section .row-cols-md-2 > * {
+        flex: 0 0 auto;
+        width: 100%; /* Make cards stack vertically on small mobile */
+    }
+    .team-section .row-cols-md-2 > * {
+        flex: 0 0 auto;
+        width: 100%; /* Ensure team cards stack on small mobiles */
+    }
+    .footer-section .col-6 {
+        flex: 0 0 auto;
+        width: 50%; /* Adjust width for 2 columns per row on extra small */
+    }
+    .all-services-grid-section .row-cols-md-2 > * { /* Ensure service cards stack on small mobile */
+        flex: 0 0 auto;
+        width: 100%;
+    }
+    .mission-vision-section .col-md-4 {
+        width: 80%; /* Adjust value card width */
+    }
+    .contact-support-section .col-md-4 {
+        width: 80%; /* Adjust contact card width */
+    }
+    .additional-resources-section .col-md-4 {
+        width: 80%; /* Adjust resource card width */
+    }
+}
+
+@media (max-width: 575.98px) { /* Extra small devices */
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    .hero-section .btn-lg {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    .services-section, .choose-us-section, .our-services-section, .team-section, .footer-section, .page-hero-section, .all-services-grid-section, .mission-vision-section, .cta-section, .faq-section, .contact-support-section, .additional-resources-section, .appointment-form-section, .clinic-info-section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .services-section h2, .choose-us-content h2, .our-services-content h2, .team-section h2, .page-hero-section h1, .mission-vision-section h3, .cta-section h2, .faq-section h2, .contact-support-section h2, .additional-resources-section h2 {
+        font-size: 2rem;
+    }
+    .choose-us-image-wrapper img {
+        width: 100%; /* Full width on very small screens */
+        border-radius: 10px; /* Slightly less rounded */
+    }
+    .team-image-wrapper {
+        height: 280px; /* Slightly smaller image height on very small screens */
+    }
+    .footer-section .col-md-3,
+    .footer-section .col-md-2,
+    .footer-section .col-6 {
+        width: 100%; /* Stack all columns vertically on very small screens */
+        text-align: center;
+        margin-bottom: 20px; /* Adjust spacing */
+    }
+    .footer-section .social-icons {
+        margin-bottom: 20px; /* Space between social icons and next column */
+    }
+    .footer-section .footer-links {
+        padding-left: 0; /* Ensure no extra padding */
+    }
+    .mission-vision-section .value-card {
+        width: 100%; /* Full width for value cards on very small screens */
+        padding: 20px; /* Adjust padding */
+    }
+    .contact-support-section .col-md-4,
+    .additional-resources-section .col-md-4 {
+        width: 100%; /* Full width for cards on very small screens */
+    }
+}
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg py-3 custom-navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="#">Dental</a>
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-start custom-offcanvas" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">Dental</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="help.html">Help</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex align-items-center ms-lg-4 mt-3 mt-lg-0">
+                        <a href="appointment.html" class="btn btn-main me-2">Appointment</a>
+                        <!-- <a href="#" class="btn btn-icon-outline rounded-circle me-2 d-none d-lg-block"><i class="fas fa-search"></i></a>
+                        <a href="#" class="btn btn-icon-outline rounded-circle d-none d-lg-block"><i class="fas fa-user"></i></a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-hero-section appointment-hero-section py-5 py-md-6 bg-light-gray position-relative overflow-hidden">
+        <div class="decorative-blob-green"></div>
+        <div class="decorative-star-pink"></div>
+        <div class="container text-center position-relative z-1">
+            <h1 class="display-3 fw-bold text-dark-heading mb-3 animate-fade-in-up">Book Your Convenient Appointment</h1>
+            <p class="lead text-muted mx-auto mb-4 animate-fade-in-up animate-delay-1" style="max-width: 700px;">
+                Please fill out the form below with your preferred date and time, and our team will confirm your booking shortly.
+            </p>
+        </div>
+    </section>
+
+    <section class="appointment-form-section py-5 py-md-6">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="appointment-form-card p-4 p-md-5 rounded-lg shadow-lg bg-white animate-fade-in-up animate-delay-2">
+                        <h3 class="fw-bold text-dark-heading mb-4 text-center">Schedule Your Visit</h3>
+                        <form action="#" method="POST">
+                            <div class="row g-4 mb-4">
+                                <div class="col-md-6">
+                                    <label for="fullName" class="form-label fw-bold">Full Name</label>
+                                    <input type="text" class="form-control" id="fullName" placeholder="Your Full Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label fw-bold">Email Address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label fw-bold">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" placeholder="(123) 456-7890" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="service" class="form-label fw-bold">Select Service</label>
+                                    <select class="form-select" id="service" required>
+                                        <option selected disabled value="">Choose...</option>
+                                        <option>General Check-up & Cleaning</option>
+                                        <option>Cosmetic Dentistry</option>
+                                        <option>Dental Implants</option>
+                                        <option>Root Canal Treatment</option>
+                                        <option>Emergency Dental Care</option>
+                                        <option>Orthodontics</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="preferredDate" class="form-label fw-bold">Preferred Date</label>
+                                    <input type="date" class="form-control" id="preferredDate" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="preferredTime" class="form-label fw-bold">Preferred Time</label>
+                                    <input type="time" class="form-control" id="preferredTime" required>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="form-label fw-bold">Your Message (Optional)</label>
+                                <textarea class="form-control" id="message" rows="4" placeholder="Any specific concerns or details you'd like to share?"></textarea>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-main btn-lg">Request Appointment</button>
+                            </div>
+                        </form>
+                        <p class="text-muted text-center mt-4 small">
+                            We will contact you within 24 business hours to confirm your appointment details.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="clinic-info-section py-5 py-md-6 bg-light-gray text-center">
+        <div class="container">
+            <h2 class="display-5 fw-bold text-dark-heading mb-4">Find Our Clinic</h2>
+            <p class="lead text-muted mx-auto mb-5" style="max-width: 700px;">
+                We are conveniently located and easily accessible.
+            </p>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="map-placeholder rounded-lg shadow-sm mb-4">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15222.02905389659!2d78.36875085!3d17.48831905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbd8a52c1e8477%3A0xf6b0a7c4a1e9c5a1!2sDental%20Care%20Clinic!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-lg"></iframe>
+                    </div>
+                    <p class="text-muted fw-bold mb-1">Dental Clinic Address:</p>
+                    <p class="text-muted mb-0">Eng College Aliganj Lucknow Uttae Pradesh India</p>
+                    <p class="text-muted mb-4"><a href="tel:9517048512" class="text-decoration-none text-muted">9517048512</a> | <a href="mailto:kuldeep.helps@gmail.com" class="text-decoration-none text-muted">kuldeep.helps@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-section py-5 py-md-6">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h3 class="footer-brand fw-bold fs-4"><a href="index.html" class="text-decoration-none text-dark">Dental</a></h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon-circle me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon-circle me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon-circle"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 col-6 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3">Company</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-6 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3">Get Help</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="help.html">Support Career</a></li>
+                        <li><a href="#">24h Service</a></li>
+                        <li><a href="#">Quick Chat</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-6 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3">Support</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="help.html">FAQ</a></li>
+                        <li><a href="#">Policy</a></li>
+                        <li><a href="#">Business</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-6">
+                    <h5 class="fw-bold mb-3">Book & Contact</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="appointment.html">Book Appointment</a></li>
+                        <li><a href="tel:+1234567890">Call Us</a></li>
+                        <li><a href="mailto:info@yourdentalclinic.com">Email Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

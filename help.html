@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & Support - Professional Dental Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+
+    <link rel="stylesheet" href="css/style2.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg py-3 custom-navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="#">Dental</a>
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-start custom-offcanvas" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">Dental</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="help.html">Help</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex align-items-center ms-lg-4 mt-3 mt-lg-0">
+                        <a href="appointment.html" class="btn btn-main me-2">Appointment</a>
+                        <!-- <a href="#" class="btn btn-icon-outline rounded-circle me-2 d-none d-lg-block"><i class="fas fa-search"></i></a>
+                        <a href="#" class="btn btn-icon-outline rounded-circle d-none d-lg-block"><i class="fas fa-user"></i></a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="page-hero-section help-hero-section py-5 py-md-6 bg-light-gray position-relative overflow-hidden">
+        <div class="decorative-square-blue"></div>
+        <div class="decorative-circle-yellow"></div>
+        <div class="container text-center position-relative z-1">
+            <h1 class="display-3 fw-bold text-dark-heading mb-3 animate-fade-in-up">How Can We Help You Today?</h1>
+            <p class="lead text-muted mx-auto mb-4 animate-fade-in-up animate-delay-1">
+                Find quick answers to common questions about our services, appointments, and clinic policies.
+                Your convenience is our priority!
+            </p>
+            <div class="d-flex justify-content-center animate-fade-in-up animate-delay-2">
+                <a href="#faq-section" class="btn btn-main btn-lg me-3">Explore FAQs</a>
+                <a href="#contact-support-section" class="btn btn-secondary-outline btn-lg">Contact Support</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq-section" class="faq-section py-5 py-md-6 position-relative overflow-hidden">
+        <div class="decorative-line-pattern"></div>
+        <div class="container position-relative z-1">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-dark-heading mb-3">Frequently Asked Questions</h2>
+                <p class="lead text-muted mx-auto" style="max-width: 600px;">
+                    We've compiled a list of common inquiries to assist you.
+                </p>
+            </div>
+
+            <div class="accordion accordion-flush" id="faqAccordion">
+                <div class="accordion-item shadow-sm mb-3 rounded-lg animate-fade-in-left">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <i class="fas fa-question-circle me-3 text-primary"></i> What types of dental services do you offer?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-muted">
+                            We provide a comprehensive range of dental services including general check-ups, cosmetic dentistry (like teeth whitening and veneers), restorative treatments (fillings, crowns, bridges), orthodontics, and emergency dental care. For a detailed list, please visit our <a href="services.html">Services page</a>.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item shadow-sm mb-3 rounded-lg animate-fade-in-left animate-delay-1">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <i class="fas fa-calendar-alt me-3 text-success"></i> How can I book or reschedule an appointment?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-muted">
+                            You can easily book or reschedule an appointment by visiting our dedicated <a href="appointment.html">Book Appointment page</a>, filling out the online form, or by calling us directly at <a href="tel:+1234567890">(123) 456-7890</a> during business hours.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item shadow-sm mb-3 rounded-lg animate-fade-in-left animate-delay-2">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <i class="fas fa-wallet me-3 text-warning"></i> What are your payment options and insurance policies?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-muted">
+                            We accept most major credit cards, debit cards, and cash. We also work with a wide range of dental insurance providers. Please contact our front desk before your visit with your insurance details so we can verify your coverage and benefits.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item shadow-sm mb-3 rounded-lg animate-fade-in-left animate-delay-3">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            <i class="fas fa-notes-medical me-3 text-info"></i> What should I bring to my first appointment?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-muted">
+                            For your first appointment, please bring your identification, insurance card (if applicable), and a list of any current medications. If you have any recent dental X-rays, bringing those can also be helpful. You can also fill out patient forms online prior to your visit.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item shadow-sm mb-3 rounded-lg animate-fade-in-left animate-delay-4">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            <i class="fas fa-syringe me-3 text-danger"></i> Do you offer sedation dentistry for anxious patients?
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-muted">
+                            Yes, we understand that dental anxiety is common. We offer various sedation options, including nitrous oxide (laughing gas) and oral conscious sedation, to help make your visit as comfortable and stress-free as possible. Please discuss your concerns with us when booking your appointment.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-support-section" class="contact-support-section py-5 py-md-6 bg-light-gray position-relative overflow-hidden">
+        <div class="decorative-dots-pattern"></div>
+        <div class="container text-center position-relative z-1">
+            <h2 class="display-5 fw-bold text-dark-heading mb-4">Still Need Personalized Assistance?</h2>
+            <p class="lead text-muted mx-auto mb-5" style="max-width: 800px;">
+                Our dedicated support team is ready to help you with any specific questions or concerns that weren't answered above.
+            </p>
+            <div class="row justify-content-center g-4">
+                <div class="col-md-4">
+                    <div class="contact-card p-4 rounded-lg shadow-sm h-100 d-flex flex-column align-items-center justify-content-center animate-fade-in-up">
+                        <i class="fas fa-phone-alt fa-3x mb-3 text-primary"></i>
+                        <h4 class="fw-bold mb-2">Call Us Anytime</h4>
+                        <p class="text-muted mb-0"><a href="tel:+1234567890" class="text-decoration-none text-muted fw-bold">(123) 456-7890</a></p>
+                        <p class="text-muted small">Available Monday - Friday, 9 AM - 5 PM</p>
+                        <a href="tel:+1234567890" class="btn btn-main btn-sm mt-3">Call Now</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-card p-4 rounded-lg shadow-sm h-100 d-flex flex-column align-items-center justify-content-center animate-fade-in-up animate-delay-1">
+                        <i class="fas fa-envelope fa-3x mb-3 text-success"></i>
+                        <h4 class="fw-bold mb-2">Email Our Team</h4>
+                        <p class="text-muted mb-0"><a href="mailto:info@yourdentalclinic.com" class="text-decoration-none text-muted fw-bold">info@yourdentalclinic.com</a></p>
+                        <p class="text-muted small">We aim to respond within 24 business hours</p>
+                        <a href="mailto:info@yourdentalclinic.com" class="btn btn-main btn-sm mt-3">Send Email</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-card p-4 rounded-lg shadow-sm h-100 d-flex flex-column align-items-center justify-content-center animate-fade-in-up animate-delay-2">
+                        <i class="fas fa-location-dot fa-3x mb-3 text-warning"></i>
+                        <h4 class="fw-bold mb-2">Visit Our Clinic</h4>
+                        <p class="text-muted mb-0">123 Dental Street, Smile City, State, ZIP</p>
+                        <p class="text-muted small">Please schedule an appointment before visiting</p>
+                        <a href="#" class="btn btn-main btn-sm mt-3">Get Directions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="additional-resources-section py-5 py-md-6">
+        <div class="container text-center">
+            <h2 class="display-5 fw-bold text-dark-heading mb-4">Explore More Resources</h2>
+            <p class="lead text-muted mx-auto mb-5" style="max-width: 700px;">
+                Dive deeper into our services, read patient testimonials, or schedule your next visit.
+            </p>
+            <div class="row justify-content-center g-4">
+                <div class="col-md-4">
+                    <div class="resource-card p-4 rounded-lg shadow-sm h-100 animate-fade-in-up">
+                        <i class="fas fa-tooth fa-2x mb-3 text-info"></i>
+                        <h4 class="fw-bold mb-3">Our Comprehensive Services</h4>
+                        <p class="text-muted">Discover all the dental treatments we offer.</p>
+                        <a href="services.html" class="btn btn-secondary-outline btn-sm">View Services</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="resource-card p-4 rounded-lg shadow-sm h-100 animate-fade-in-up animate-delay-1">
+                        <i class="fas fa-calendar-check fa-2x mb-3 text-primary"></i>
+                        <h4 class="fw-bold mb-3">Book Your Next Appointment</h4>
+                        <p class="text-muted">Conveniently schedule your visit online.</p>
+                        <a href="appointment.html" class="btn btn-secondary-outline btn-sm">Schedule Now</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="resource-card p-4 rounded-lg shadow-sm h-100 animate-fade-in-up animate-delay-2">
+                        <i class="fas fa-users-medical fa-2x mb-3 text-success"></i>
+                        <h4 class="fw-bold mb-3">Meet Our Expert Team</h4>
+                        <p class="text-muted">Learn about the professionals dedicated to your care.</p>
+                        <a href="about.html" class="btn btn-secondary-outline btn-sm">Meet the Team</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-section py-5 py-md-6">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h3 class="footer-brand fw-bold fs-4"><a href="index.html" class="text-decoration-none text-dark">Dental</a></h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon-circle me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon-circle me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon-circle"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 col-6 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3">Company</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-6 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3">Get Help</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="help.html">Support Career</a></li>
+                        <li><a href="#">24h Service</a></li>
+                        <li><a href="#">Quick Chat</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-6 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3">Support</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="help.html">FAQ</a></li>
+                        <li><a href="#">Policy</a></li>
+                        <li><a href="#">Business</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-6">
+                    <h5 class="fw-bold mb-3">Book & Contact</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="appointment.html">Book Appointment</a></li>
+                        <li><a href="tel:+1234567890">Call Us</a></li>
+                        <li><a href="mailto:info@yourdentalclinic.com">Email Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
